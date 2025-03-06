@@ -331,7 +331,7 @@ body {
     border-radius: 10px;
     width: 100%;
     height: 5px;
-    background-color: black;
+    background-color: #000000;
     animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
     transform: scaleX(0);
     transform-origin: left;
@@ -345,13 +345,21 @@ body {
 
 .Technical-bars .bar .progress-line span {
     height: 100%;
+    /* width: 0; */
     background-color: #0ef;
     position: absolute;
     border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    animation: animate-width 1s 1s forwards;
+    /* animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards; */
     transform: scaleX(0);
     transform-origin: left;
 }
+
+/* @keyframes animate-width{
+    100%{
+        width: 100%;
+    }
+} */
 
 .progress-line.html span {
     width: 90%;
@@ -369,15 +377,16 @@ body {
     width: 70%;
 }
 
-.progress-line.c span {
+.progress-line.C span {
     width: 80%;
 }
 
-.progress-line.cpp span {
+.progress-line.Cpp span {
     width: 80%;
 }
 
 .progress-line span::after {
+    /* content: attr(data-progress); */
     position: absolute;
     padding: 1px 8px;
     background-color: #000;
@@ -389,6 +398,7 @@ body {
     animation: showText 0.5s 1.5s linear forwards;
     opacity: 0;
 }
+
 
 .progress-line.html span::after {
     content: "90%";
