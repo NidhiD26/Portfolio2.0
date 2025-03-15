@@ -57,7 +57,6 @@ body {
     justify-content: space-between;
     height: 100vh;
     /* background: url(pic.png) no-repeat; */
-    
     background: url(background.png) no-repeat;
     background-size: cover;
     background-position: center;
